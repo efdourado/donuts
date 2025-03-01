@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model Restaurant {
+  id String @id @default(uuid())
+  name String
+  slug String @unique
+  description String
+  logoUrl String
+  bannerUrl String
+  categories Category[]
+  items Item[]
+  orders Order[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id String @id @default(uuid())
+  name String
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  restaurantId String
+  items Item[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Item {
+  id String @id @default(uuid())
+  name String
+  description String
+  price Float
+  imageUrl String
+  ingredients String[]
+  orderItems OrderItem[]
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  restaurantId String
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  id Int @id @default(autoincrement())
+  total Float
+  status OrderStatus
+  type OrderType
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  restaurantId String
+  orderItems OrderItem[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OrderItem {
+  id String @id @default(uuid())
+  quantity Int
+  item Item @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  itemId String
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId Int
+  price Float
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum OrderStatus {
+  PENDING
+  PREPARING
+  READY
+  CANCELLED
+}
+
+enum OrderType {
+  DINEIN
+  TAKEAWAY
+}
