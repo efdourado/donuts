@@ -51,7 +51,7 @@ model Order {
   id Int @id @default(autoincrement())
   total Float
   status OrderStatus
-  type OrderType
+  orderType OrderType
   restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   restaurantId String
   orderProducts OrderProduct[]
