@@ -50,7 +50,7 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
             <p className="text-xs opacity-55">{restaurant.description}</p>
           </div>
         </div>
-        <div className="mt-3 flex products-center gap-1 text-xs text-green-500">
+        <div className="mt-3 flex items-center gap-1 text-xs text-green-500">
           <ClockIcon size={12} />
           <p>Open!</p>
         </div>
