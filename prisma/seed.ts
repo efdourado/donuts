@@ -22,7 +22,7 @@ const main = async () => {
       },
     });
 
-    await tx.item.createMany({
+    await tx.product.createMany({
       data: [
         {
           name: "McOferta Média Big Mac Duplo",
@@ -43,7 +43,7 @@ const main = async () => {
           ],
         },
         {
-          name: "Novo Brabo Melt Onion Rings (Favorito da minha Victória)",
+          name: "Novo Brabo Melt Onion Rings (Fav. da minha Vivi)",
           description:
             "Dois hambúrgueres de carne 100% bovina, méquinese, a exclusiva maionese especial com sabor de carne defumada, onion rings, fatias de bacon, queijo processado sabor cheddar, o delicioso molho lácteo com queijo tipo cheddar tudo isso no pão tipo brioche trazendo uma explosão de sabores pros seus dias de glória! Acompanhamento e Bebida.",
           price: 41.5,
@@ -104,7 +104,7 @@ const main = async () => {
         restaurantId: restaurant.id,
       },
     });
-    await tx.item.createMany({
+    await tx.product.createMany({
       data: [
         {
           name: "Big Mac",
@@ -186,7 +186,7 @@ const main = async () => {
         restaurantId: restaurant.id,
       },
     });
-    await tx.item.createMany({
+    await tx.product.createMany({
       data: [
         {
           name: "Large Fries",
@@ -226,7 +226,7 @@ const main = async () => {
         restaurantId: restaurant.id,
       },
     });
-    await tx.item.createMany({
+    await tx.product.createMany({
       data: [
         {
           name: "Coca-Cola",
@@ -264,7 +264,7 @@ const main = async () => {
         restaurantId: restaurant.id,
       },
     });
-    await tx.item.createMany({
+    await tx.product.createMany({
       data: [
         {
           name: "Casquinha de Baunilha",

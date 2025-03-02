@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { db } from "@/lib/prisma";
-//import RestaurantCategories from "./components/categories";
-//import RestaurantHeader from "./components/header";
+import RestaurantCategories from "./components/categories";
+import RestaurantHeader from "./components/header";
 
 interface RestaurantMenuPageProps {
   params: Promise<{ slug: string }>;
@@ -25,19 +25,21 @@ const RestaurantMenuPage = async ({
     where: { slug },
     include: {
       categories: {
-        include: { items: true },
+        include: { products: true },
       },
     },
   });
   if (!restaurant) {
     return notFound();
   }
- /* return (
+  return (
     <div>
       <RestaurantHeader restaurant={restaurant} />
       <RestaurantCategories restaurant={restaurant} />
     </div>
-  );*/
+  );
 };
 
 export default RestaurantMenuPage;
+
+// http://localhost:3000/mcds/menu?orderType=DINEIN
