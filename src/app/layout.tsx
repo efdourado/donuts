@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "FSW Donalds",
+  title: "McDonald's",
   description: "Bora finalizar esse projeto lindo!",
 };
 

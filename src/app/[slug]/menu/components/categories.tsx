@@ -3,7 +3,7 @@
 import { Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
@@ -52,26 +52,9 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
         </div>
         <div className="mt-3 flex products-center gap-1 text-xs text-green-500">
           <ClockIcon size={12} />
-          <p>Aberto!</p>
+          <p>Open!</p>
         </div>
       </div>
-
-      <ScrollArea className="w-full">
-        <div className="flex w-max space-x-4 p-4 pt-0">
-          {restaurant.categories.map((category) => (
-            <Button
-              onClick={() => handleCategoryClick(category)}
-              key={category.id}
-              variant={getCategoryButtonVariant(category)}
-              size="sm"
-              className="rounded-full"
-            >
-              {category.name}
-            </Button>
-          ))}
-        </div>
-        <ScrollBar orientation="horizontal" />
-      </ScrollArea>
 
       <ScrollArea className="w-full">
         <div className="flex w-max space-x-4 p-4 pt-0">
