@@ -7,9 +7,9 @@ const main = async () => {
     await tx.restaurant.deleteMany();
     const restaurant = await tx.restaurant.create({
       data: {
-        name: "McDs",
-        slug: "mcds",
-        description: "O melhor fast food do mundo",
+        name: "Dudu's Pizzeria",
+        slug: "duduspizzeria",
+        description: "",
         logoUrl: "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQvcNP9rHlEJu1vCY5kLqzjf29HKaeN78Z6pRy",
         bannerUrl: "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQac8bHYlkBUjlHSKiuseLm2hIFzVY0OtxEPnw",
       },
