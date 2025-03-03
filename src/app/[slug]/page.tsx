@@ -22,7 +22,7 @@ const RestaurantPage = async ({ params }: RestaurantPageProps) => {
           width={82}
           height={82}
         />
-        <h2 className="font-semibold">McDonald's</h2>
+        <h2 className="font-semibold">Donuts</h2>
       </div>
       <div className="space-y-2 pt-24 text-center">
         <h3 className="text-2xl font-semibold">

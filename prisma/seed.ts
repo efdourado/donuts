@@ -9,7 +9,7 @@ const main = async () => {
       data: {
         name: "Donuts",
         slug: "donuts",
-        description: "",
+        description: "Taste the Difference",
         logoUrl: "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQvcNP9rHlEJu1vCY5kLqzjf29HKaeN78Z6pRy",
         bannerUrl: "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQac8bHYlkBUjlHSKiuseLm2hIFzVY0OtxEPnw",
       },
