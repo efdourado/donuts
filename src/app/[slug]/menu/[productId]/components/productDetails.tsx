@@ -30,8 +30,8 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
         return 1;
       }
       return prev - 1;
-    });
-  };
+  }); };
+  
   const handleIncreaseQuantity = () => {
     setQuantity((prev) => prev + 1);
   };
