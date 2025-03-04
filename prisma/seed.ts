@@ -168,7 +168,7 @@ const main = async () => {
             "Whipped Light Cream.",
           ],
           price: 9.9,
-          imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202212_0721_MediumSprite_Glass_2000x2000.png.coredownload.png",
+          imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/1509_MediumChocolateShake_Glass_A1.uuid.png.coredownload.png",
           categoryId: beveragesCategory.id,
           restaurantId: restaurant.id,
         },
@@ -320,11 +320,11 @@ const main = async () => {
           restaurantId: restaurant.id,
         },
         {
-          name: "McFlurry® with OREO® Cookies",
+          name: "OREO® McFlurry®",
           description: "The McDonald's McFlurry® with OREO® Cookies is a popular combination of creamy vanilla soft serve with crunchy pieces of OREO® cookies! ",
           ingredients: [],
           price: 12.8,
-          imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/0345_CaramelSundae.uuid.png.coredownload.png",
+          imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/3832_OreoMcFlurry.uuid%20(1).png.coredownload.png",
           categoryId: sweetsCategory.id,
           restaurantId: restaurant.id,
 }, ] }); });};

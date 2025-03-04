@@ -86,23 +86,25 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
 
           <ScrollArea className="h-full">
             <div className="mt-6 space-y-3">
-              <h4 className="font-semibold">About</h4>
+              <h4 className="font-semibold">Description</h4>
               <p className="text-sm text-muted-foreground">
                 {product.description}
               </p>
             </div>
 
-            <div className="mt-6 space-y-3">
-              <div className="5 flex items-center gap-1">
-                <ChefHatIcon size={18} />
-                <h4 className="font-semibold">Ingredients</h4>
+            {product.ingredients.length > 0 && (
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center gap-1">
+                  <ChefHatIcon size={18} />
+                  <h4 className="font-semibold">Ingredients</h4>
+                </div>
+                <ul className="text-muted-fo list-disc px-5 text-sm text-muted-foreground">
+                  {product.ingredients.map((ingredient) => (
+                    <li key={ingredient}>{ingredient}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="text-muted-fo list-disc px-5 text-sm text-muted-foreground">
-                {product.ingredients.map((ingredient) => (
-                  <li key={ingredient}>{ingredient}</li>
-                ))}
-              </ul>
-            </div>
+            )}
           </ScrollArea>
         </div>
 
@@ -112,6 +114,5 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
       </div>
       <CartSheet />
     </>
-); };
-
-export default ProductDetails;
+  );
+};

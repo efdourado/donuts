@@ -26,9 +26,8 @@ const RestaurantMenuPage = async ({
     include: {
       categories: {
         include: { products: true },
-      },
-    },
-  });
+  }, }, });
+  
   if (!restaurant) {
     return notFound();
   }
@@ -37,8 +36,7 @@ const RestaurantMenuPage = async ({
       <RestaurantHeader restaurant={restaurant} />
       <RestaurantCategories restaurant={restaurant} />
     </div>
-  );
-};
+); };
 
 export default RestaurantMenuPage;
 
