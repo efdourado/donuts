@@ -33,8 +33,7 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-  }
-}
+} }
 
 @layer base {
   * {
@@ -43,8 +42,6 @@ body {
   body {
     @apply h-full bg-background text-foreground;
   }
-
   html {
     @apply h-full;
-  }
-}
+} }

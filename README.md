@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Donuts
 
-## Getting Started
+## Description
 
-First, run the development server:
+The project was developed using **Next.js** for the frontend, **Prisma** for database management with PostgreSQL, and is fully dynamic, allowing customization of information like name, image, product categories, etc.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Restaurant Page**:
+    - 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Menu Page**:
+    - Displays the categories of products available at the restaurant.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Organization
 
-## Learn More
+- **Backend**: 
+  - Uses Prisma ORM to integrate with the PostgreSQL database.
+  - Database models:
+    - **Restaurant**: Contains information about the restaurant.
+    - **Category**: Contains the categories for products.
+    - **Product**: Information about menu products.
+    - **Order**: Details about customer orders.
+    - **OrderProduct**: Relates products to the orders made.
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**:
+  - **Next.js** is used for dynamic page rendering.
+  - Components such as **Image** for displaying dynamic images and **OrderTypeOption** for navigating between order types (DineIn and Takeaway).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Run
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js installed.
+- A Neon account (for PostgreSQL database) and database configuration.
+- Vercel for hosting the project (optional).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Steps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Install Dependencies**:
+
+    - Clone the repository:
+
+        ```bash
+        git clone <REPOSITORY_URL>
+        cd <DIRECTORY_NAME>
+        ```
+
+    - Install the dependencies:
+
+        ```bash
+        npm install
+        ```
+
+2. **Database**:
+
+    - Create a `.env` file and add your Neon PostgreSQL database URL:
+
+        ```bash
+        DATABASE_URL="your_postgresql_database_url"
+
+3. **Access the Restaurant**:
+
+    - Start the development server:
+
+        ```bash
+        npm run dev
+    - The default template is a McDonald's model and you can access at: `http://localhost:3000/mcdonaldsmodel`.

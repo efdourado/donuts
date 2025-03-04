@@ -10,8 +10,8 @@ const main = async () => {
         name: "McDonald's Model",
         slug: "mcdonaldsmodel",
         description: "Taste the Difference",
-        logoUrl: "/favicon.ico",
-        bannerUrl: "/mcdonaldsbanner.jpg",
+        logoUrl: "/logo-mcdonalds.png",
+        bannerUrl: "/mcdonaldsBanner.jpg",
     }, });
 
     const breakfastCategory = await tx.category.create({
