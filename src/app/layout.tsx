@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "McDonald's",
-  description: "Bora finalizar esse projeto lindo!",
+  title: "McDonald's Model",
+  description: "Taste the Dfiference",
 };
 
 export default function RootLayout({
@@ -28,5 +28,4 @@ export default function RootLayout({
         <Toaster/>
       </body>
     </html>
-  );
-}
+); }
