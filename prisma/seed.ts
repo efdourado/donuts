@@ -10,8 +10,8 @@ const main = async () => {
         name: "McDonald's Model",
         slug: "mcdonaldsmodel",
         description: "Taste the Difference",
-        logoUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/Golden%20Arches.png.coredownload.png",
-        bannerUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/Thumb_OhioStateUniversity.png.coredownload.png",
+        logoUrl: "/favicon.ico",
+        bannerUrl: "/mcdonaldsbanner.jpg",
     }, });
 
     const dealsCategory = await tx.category.create({
