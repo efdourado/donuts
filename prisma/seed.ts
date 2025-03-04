@@ -45,17 +45,37 @@ const main = async () => {
       data: [
         {
           name: "4 pc. Chicken McNugget® Happy Meal®",
-          description: "Pieces of chicken, covered in crispy bread crumbs, and a drink will serve as a great meal for the youngest visitors of McDonald’s!",
-          price: 28.4,
-          imageUrl:"https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202103_7002_4McNuggetsHappyMeal_AppleSlices_WhiteMilkJug_Left_2000x2000.png.coredownload.png",
-          categoryId: dealsCategory.id,
-          restaurantId: restaurant.id,
+          description: "Pieces of chicken, covered in crispy bread crumbs, and a drink will serve as a great meal for the youngest visitors of McDonald's!",
           ingredients: [
             "Chicken McNuggets (4 pc);",
             "A toy or a book of your choice;",
             "Small fries / Cucumber Sticks / Melon fruit bag;",
             "A drink of your choice.",
-    ], }, ], });
+          ],
+          price: 28.4,
+          imageUrl:"https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202103_7002_4McNuggetsHappyMeal_AppleSlices_WhiteMilkJug_Left_2000x2000.png.coredownload.png",
+          categoryId: dealsCategory.id,
+          restaurantId: restaurant.id,
+        },
+        {
+          name: "Big Breakfast® with Hotcakes",
+          description: "McDonald's Big Breakfast® with Hotcakes satisfies with both sweet and savory breakfast favorites. Fill up with a warm Biscuit, savory hot Sausage, fluffy scrambled Eggs, crispy Hash Browns, and golden brown Hotcakes with a side of real butter and the sweet flavor of maple.",
+          ingredients: [
+            "Hotcakes;",
+            "Scrambled Eggs;",
+            "Biscuit;",
+            "Hotcake Syrup;",
+            "Hash Browns;",
+            "Sausage Patty;",
+            "Salted Whipped Butter;",
+            "Salted Butter;",
+            "Clarified Butter.",
+          ],
+          price: 43.8,
+          imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202208_3590_BigBreakfast_HotCakes_2000x2000.png.coredownload.png",
+          categoryId: dealsCategory.id,
+          restaurantId: restaurant.id,
+    }, ], });
 
     const burguersCategory = await tx.category.create({
       data: {
@@ -95,6 +115,15 @@ const main = async () => {
           ],
           price: 34.9,
           imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202201_4308-005_DoubleQuarterPounderCheeseDeluxe_Shredded_2000x2000.png.coredownload.png",
+          categoryId: burguersCategory.id,
+          restaurantId: restaurant.id,
+        },
+        {
+          name: "Double Bacon Quarter Pounder® with Cheese & Bacon",
+          description: "No description",
+          ingredients: [],
+          price: 36.9,
+          imageUrl: "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/newsroom/menu-items-2023/NR_202201_4333-005_DoubleQuarterPounderBaconCheese_2000x2000.png.coredownload.png",
           categoryId: burguersCategory.id,
           restaurantId: restaurant.id,
     }, ], });
