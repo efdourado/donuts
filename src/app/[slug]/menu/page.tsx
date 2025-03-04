@@ -39,5 +39,3 @@ const RestaurantMenuPage = async ({
 ); };
 
 export default RestaurantMenuPage;
-
-// http://localhost:3000/mcds/menu?orderType=DINEIN

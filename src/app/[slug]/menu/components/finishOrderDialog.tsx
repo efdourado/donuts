@@ -8,7 +8,6 @@ import { useContext, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { PatternFormat } from "react-number-format";
 import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -28,8 +27,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 
+import { Input } from "@/components/ui/input";
 import { createOrder } from "../actions/createOrder";
 import { CartContext } from "../contexts/cart";
 import { isValidCpf } from "../helpers/cpf";
@@ -46,8 +45,7 @@ const formSchema = z.object({
     })
     .refine((value) => isValidCpf(value), {
       message: "CPF inválido.",
-    }),
-});
+}), });
 
 type FormSchema = z.infer<typeof formSchema>;
 
@@ -81,20 +79,18 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
           customerName: data.name,
           products,
           slug,
-        });
-      });
+    }); });
     } catch (error) {
       console.error(error);
-    }
-  };
+  } };
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild></DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Finalizar Pedido</DrawerTitle>
+          <DrawerTitle>Finish Order</DrawerTitle>
           <DrawerDescription>
-            Insira suas informações abaixo para finalizar o seu pedido.
+            To finish your order, please type your information below so we can locate your order and proceed to payment checkout.
           </DrawerDescription>
         </DrawerHeader>
         <div className="p-5">
@@ -105,9 +101,9 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Seu nome</FormLabel>
+                    <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Digite seu nome..." {...field} />
+                      <Input placeholder="Please enter your name..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -118,10 +114,10 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                 name="cpf"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Seu CPF</FormLabel>
+                    <FormLabel>CPF (Br ID)</FormLabel>
                     <FormControl>
                       <PatternFormat
-                        placeholder="Digite seu CPF..."
+                        placeholder="Enter your CPF to locate your order..."
                         format="###.###.###-##"
                         customInput={Input}
                         {...field}
@@ -131,7 +127,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   </FormItem>
                 )}
               />
-
               <DrawerFooter>
                 <Button
                   type="submit"
@@ -140,11 +135,11 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   disabled={isPending}
                 >
                   {isPending && <Loader2Icon className="animate-spin" />}
-                  Finalizar
+                  Finish
                 </Button>
                 <DrawerClose asChild>
                   <Button className="w-full rounded-full" variant="outline">
-                    Cancelar
+                    Cancel
                   </Button>
                 </DrawerClose>
               </DrawerFooter>
@@ -153,7 +148,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
         </div>
       </DrawerContent>
     </Drawer>
-  );
-};
+); };
 
 export default FinishOrderDialog;

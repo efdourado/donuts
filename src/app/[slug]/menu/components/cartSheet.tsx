@@ -20,7 +20,7 @@ const CartSheet = () => {
     <Sheet open={isOpen} onOpenChange={toggleCart}>
       <SheetContent className="w-[80%]">
         <SheetHeader>
-          <SheetTitle className="text-left">Sacola</SheetTitle>
+          <SheetTitle className="text-left">Cart</SheetTitle>
         </SheetHeader>
         <div className="flex h-full flex-col py-5">
           <div className="flex-auto">
@@ -36,20 +36,14 @@ const CartSheet = () => {
               </div>
             </CardContent>
           </Card>
-          <Button
-            className="w-full rounded-full"
-            onClick={() => setFinishOrderDialogIsOpen(true)}
+          <Button className="w-full rounded-full" onClick={() => setFinishOrderDialogIsOpen(true)}
           >
-            Finalizar pedido
+            Finish order
           </Button>
-          <FinishOrderDialog
-            open={finishOrderDialogIsOpen}
-            onOpenChange={setFinishOrderDialogIsOpen}
-          />
+          <FinishOrderDialog open={finishOrderDialogIsOpen} onOpenChange={setFinishOrderDialogIsOpen}/>
         </div>
       </SheetContent>
     </Sheet>
-  );
-};
+); };
 
 export default CartSheet;
