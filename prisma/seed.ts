@@ -11,7 +11,7 @@ const main = async () => {
         slug: "mcdonaldsmodel",
         description: "Taste the Difference",
         logoUrl: "/logo-mcdonalds.png",
-        bannerUrl: "/mcdonaldsBanner.jpg",
+        bannerUrl: "/banner-mcdonalds.jpg",
     }, });
 
     const breakfastCategory = await tx.category.create({

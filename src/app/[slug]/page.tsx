@@ -38,14 +38,14 @@ const RestaurantPage = async ({ params }: RestaurantPageProps) => {
           option="DINEIN"
           buttonText="Stay & Savor"
           imageAlt="dine in"
-          imageUrl="/dineIn.png"
+          imageUrl="/dine-in.png"
         />
         <OrderTypeOption
           slug={slug}
           option="TAKEAWAY"
           buttonText="Grab & Go"
           imageAlt="takeaway"
-          imageUrl="/takeAway.png"
+          imageUrl="/take-away.png"
         />
       </div>
     </div>
