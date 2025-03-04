@@ -114,5 +114,6 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
       </div>
       <CartSheet />
     </>
-  );
-};
+); };
+
+export default ProductDetails;
